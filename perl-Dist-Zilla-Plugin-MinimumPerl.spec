@@ -1,15 +1,13 @@
 %define upstream_name    Dist-Zilla-Plugin-MinimumPerl
-%define upstream_version 1.006
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.006
+Release:	2
 
 Summary:	Detects the minimum version of Perl required for your dist
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/apocalypse/perl-dist-zilla-plugin-minimumperl
-Source0:	https://cpan.metacpan.org/authors/id/A/AP/APOCAL/Dist-Zilla-Plugin-MinimumPerl-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AP/APOCAL/Dist-Zilla-Plugin-MinimumPerl-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +29,7 @@ You can specify a version of Perl to override the scanning logic.
 This plugin accepts the following options:
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
